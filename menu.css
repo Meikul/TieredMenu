@@ -1,33 +1,43 @@
-.main-navigation.gray-nav:nth-of-type(3) {
-  background: #3f5469 !important;
+.main-navigation.gray-nav:nth-of-type(3){
+  background: #3f5469;
 }
 
-.main-navigation.gray-nav:nth-of-type(3) nav{
-  height: 54px !important;
-  background: #3f5469 !important;
-  overflow-y: hidden;
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default{
+  background: #3f5469;
+  /* background: #215db8; */
+  /* overflow-y: hidden; */
 }
 
-.main-navigation.gray-nav:nth-of-type(3) a{
-  color: white !important;
-  background: transparent !important;
-  border-left: none !important;
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default button.navbar-toggle{
+  margin: 10px;
 }
 
-.main-navigation.gray-nav:nth-of-type(3) a:hover{
-  /* border-left: 1px solid transparent !important; */
-  border-left: none !important;
-  background: rgba(255, 255, 255, 0.2) !important;
+
+/* .main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default ul{
+  line-height: unset;
 }
 
-.main-navigation.gray-nav:nth-of-type(3) button.navbar-toggle>span.icon-bar {
-  background: white !important;
-}
-/* 
-.main-navigation.gray-nav:nth-of-type(3) a {
-  background: white !important;
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default li{
+  line-height: unset;
 } */
 
-.main-navigation.gray-nav:nth-of-type(3) .navbar-brand{
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default a{
+  font-size: 1.2em;
+  padding: 15px;
+  color: white;
+  background: transparent;
+  border-left: none;
+}
+
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default a:hover{
+  border-left: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default button.navbar-toggle>span.icon-bar {
+  background: white;
+}
+
+.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default .navbar-brand{
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
