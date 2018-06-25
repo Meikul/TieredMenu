@@ -10,13 +10,13 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <script type="text/javascript">
-    window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+    window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
       function r(n) {
         if (!t[n]) {
           var o = t[n] = {
             exports: {}
           };
-          e[n][0].call(o.exports, function (t) {
+          e[n][0].call(o.exports, function(t) {
             var o = e[n][1][t];
             return r(o || t)
           }, o, o.exports)
@@ -27,11 +27,11 @@
       for (var o = 0; o < n.length; o++) r(n[o]);
       return r
     }({
-      1: [function (e, t, n) {
-        function r() { }
+      1: [function(e, t, n) {
+        function r() {}
 
         function o(e, t, n) {
-          return function () {
+          return function() {
             return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
           }
         }
@@ -45,35 +45,35 @@
         var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
           d = "api-",
           l = d + "ixn-";
-        a(p, function (e, t) {
+        a(p, function(e, t) {
           s[t] = o(d + t, !0, "api")
-        }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+        }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() {
           return (new r).get()
         };
         var m = r.prototype = {
-          createTracer: function (e, t) {
+          createTracer: function(e, t) {
             var n = {},
               r = this,
               o = "function" == typeof t;
             return i(l + "tracer", [f.now(), e, n], r),
-              function () {
+              function() {
                 if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
                   return t.apply(this, arguments)
                 } catch (e) {
                   throw c.emit("fn-err", [arguments, this, e], n), e
                 } finally {
-                    c.emit("fn-end", [f.now()], n)
-                  }
+                  c.emit("fn-end", [f.now()], n)
+                }
               }
           }
         };
-        a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+        a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
           m[t] = o(l + t)
-        }), newrelic.noticeError = function (e) {
+        }), newrelic.noticeError = function(e) {
           "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
         }
       }, {}],
-      2: [function (e, t, n) {
+      2: [function(e, t, n) {
         function r(e, t) {
           var n = [],
             r = "",
@@ -84,7 +84,7 @@
         var o = Object.prototype.hasOwnProperty;
         t.exports = r
       }, {}],
-      3: [function (e, t, n) {
+      3: [function(e, t, n) {
         function r(e, t, n) {
           t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
           for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
@@ -92,13 +92,13 @@
         }
         t.exports = r
       }, {}],
-      4: [function (e, t, n) {
+      4: [function(e, t, n) {
         t.exports = {
           exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
         }
       }, {}],
-      ee: [function (e, t, n) {
-        function r() { }
+      ee: [function(e, t, n) {
+        function r() {}
 
         function o(e) {
           function t(e) {
@@ -127,7 +127,7 @@
           }
 
           function g(e, t) {
-            f(e, function (e, n) {
+            f(e, function(e, n) {
               t = t || "feature", y[n] = t, t in s || (s[t] = [])
             })
           }
@@ -161,7 +161,7 @@
           d = t.exports = o();
         d.backlog = s
       }, {}],
-      gos: [function (e, t, n) {
+      gos: [function(e, t, n) {
         function r(e, t, n) {
           if (o.call(e, t)) return e[t];
           var r = n();
@@ -171,23 +171,23 @@
               writable: !0,
               enumerable: !1
             }), r
-          } catch (i) { }
+          } catch (i) {}
           return e[t] = r, r
         }
         var o = Object.prototype.hasOwnProperty;
         t.exports = r
       }, {}],
-      handle: [function (e, t, n) {
+      handle: [function(e, t, n) {
         function r(e, t, n, r) {
           o.buffer([e], r), o.emit(e, t, n)
         }
         var o = e("ee").get("handle");
         t.exports = r, r.ee = o
       }, {}],
-      id: [function (e, t, n) {
+      id: [function(e, t, n) {
         function r(e) {
           var t = typeof e;
-          return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+          return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() {
             return o++
           })
         }
@@ -196,13 +196,13 @@
           a = e("gos");
         t.exports = r
       }, {}],
-      loader: [function (e, t, n) {
+      loader: [function(e, t, n) {
         function r() {
           if (!x++) {
             var e = h.info = NREUM.info,
               t = d.getElementsByTagName("script")[0];
             if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
-            f(y, function (t, n) {
+            f(y, function(t, n) {
               e[t] || (e[t] = n)
             }), c("mark", ["onload", a() + h.offset], null, "api");
             var n = d.createElement("script");
@@ -290,11 +290,9 @@
 
 
 
-  <!-- <link rel="stylesheet" type="text/css" href="file:///Users/michael/Projects/tieredMenu/extension.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="file:///Users/michael/Projects/extension/extMenu/extension.css"> -->
   <link rel="stylesheet" href="https://kirksalisbury.ou.usu.edu/_resources/css/extension.css">
-  <!-- <link rel="stylesheet" href="https://meikul.github.io/TieredMenu/menu.css"> -->
-  <link rel="stylesheet" href="file:///Users/michael/Projects/tieredMenu/menu.css">
-
+  <link rel="stylesheet" href="file:///Users/michael/Projects/extension/extMenu/menu.css">
 
 
 
@@ -353,44 +351,23 @@
   <div id="global-header">
     <div id="global-header-wrapper" style="min-height: 90px;">
       <div class="row">
-        <div class="brand">
-          <a href="//extension.usu.edu">
-            <img class="img-responsive" src="https://extension.usu.edu/_resources/images/Extension-4H-Logo.png" alt="USU Extension Logo"
-            />
-          </a>
+        <div class="brand"><a href="//extension.usu.edu">
+					<img class="img-responsive" src="https://extension.usu.edu/_resources/images/Extension-4H-Logo.png" alt="USU Extension Logo" /></a>
         </div>
         <div class="header-right">
           <div class="row">
             <div class="header-navigation pull-right" role="navigation">
               <ul class="header-links">
-                <li>
-                  <a href="//www.usu.edu/">
-                    <span class="fa fa-home fa-lg"></span>
-                    <span class="sr-only">USU Home</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="//usu.edu/azindex/">A-Z Index</a>
-                </li>
-                <li>
-                  <a href="//usu.edu/myusu/">MyUSU</a>
-                </li>
-                <li>
-                  <a href="//directory.usu.edu/">Directory</a>
-                </li>
+                <li><a href="//www.usu.edu/"><span class="fa fa-home fa-lg"></span><span class="sr-only">USU Home</span></a></li>
+                <li><a href="//usu.edu/azindex/">A-Z Index</a></li>
+                <li><a href="//usu.edu/myusu/">MyUSU</a></li>
+                <li><a href="//directory.usu.edu/">Directory</a></li>
               </ul>
             </div>
             <div class="header-search pull-right">
               <form method="get" role="form" name="search" id="search" action="https://www.usu.edu/search/">
-                <div class="input-group pull-right">
-                  <label class="sr-only" for="gsearch">Search</label>
-                  <input id="gsearch" name="q" type="text" class="form-control" placeholder="" value="">
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn" tabindex="-1">
-                      <span class="glyphicon glyphicon-search"></span>
-                      <span class="sr-only">Search USU</span>
-                    </button>
-                  </div>
+                <div class="input-group pull-right"><label class="sr-only" for="gsearch">Search</label><input id="gsearch" name="q" type="text" class="form-control" placeholder="" value="">
+                  <div class="input-group-btn"><button type="submit" class="btn" tabindex="-1"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search USU</span></button></div>
                 </div>
               </form>
             </div>
@@ -407,19 +384,17 @@
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#global-navigation-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
         </div>
         <div class="collapse navbar-collapse" id="global-navigation-collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">4-H</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">4-H
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">4-H</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">4-H <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -429,53 +404,28 @@
                         <div class="col-sm-4">
                           <h1>4-H</h1>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse.
                           </p>
                         </div>
                         <div class="col-sm-4">
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://utah4-h.org/">Utah 4-h</a>
-                            </li>
-                            <li>
-                              <a href="http://saltlakecounty4-h.org/">Salt Lake County</a>
-                            </li>
-                            <li>
-                              <a href="https://boxelder4h.usu.edu/">Box Elder</a>
-                            </li>
-                            <li>
-                              <a href="https://carboncounty4-h.org/">Carbon County</a>
-                            </li>
-                            <li>
-                              <a href="https://dixie4h.org/">Dixie</a>
-                            </li>
-                            <li>
-                              <a href="https://seviercounty4-h.org/">Sevier County</a>
-                            </li>
-                            <li>
-                              <a href="https://utahcounty4h.org/">Utah County</a>
-                            </li>
-                            <li>
-                              <a href="https://webercounty4-h.org/">Weber County</a>
-                            </li>
+                            <li><a href="https://utah4-h.org/">Utah 4-h</a></li>
+                            <li><a href="http://saltlakecounty4-h.org/">Salt Lake County</a></li>
+                            <li><a href="https://boxelder4h.usu.edu/">Box Elder</a></li>
+                            <li><a href="https://carboncounty4-h.org/">Carbon County</a></li>
+                            <li><a href="https://dixie4h.org/">Dixie</a></li>
+                            <li><a href="https://seviercounty4-h.org/">Sevier County</a></li>
+                            <li><a href="https://utahcounty4h.org/">Utah County</a></li>
+                            <li><a href="https://webercounty4-h.org/">Weber County</a></li>
                           </ul>
                         </div>
                         <div class="col-sm-4">
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://extension.usu.edu/uae4hw/">UAE4-HW</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/cyberlivestock/">Cyber Livestock</a>
-                            </li>
-                            <li>
-                              <a href="https://kidscamps.usu.edu/">Kids Camps</a>
-                            </li>
-                            <li>
-                              <a href="https://naturehighcamp.org/">Nature High Summer Camp</a>
-                            </li>
+                            <li><a href="https://extension.usu.edu/uae4hw/">UAE4-HW</a></li>
+                            <li><a href="https://extension.usu.edu/cyberlivestock/">Cyber Livestock</a></li>
+                            <li><a href="https://kidscamps.usu.edu/">Kids Camps</a></li>
+                            <li><a href="https://naturehighcamp.org/">Nature High Summer Camp</a></li>
                           </ul>
                         </div>
                       </div>
@@ -486,10 +436,8 @@
               </ul>
             </li>
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Food</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Food
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Food</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Food <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -504,40 +452,24 @@
                         <div class="col-sm-3">
                           <h2>Preparation</h2>
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://extension.usu.edu/food/">Food</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/youthcancook/">Youth Can Cook</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/foodsense/">Food $ense</a>
-                            </li>
+                            <li><a href="https://extension.usu.edu/food/">Food</a></li>
+                            <li><a href="https://extension.usu.edu/youthcancook/">Youth Can Cook</a></li>
+                            <li><a href="https://extension.usu.edu/foodsense/">Food $ense</a></li>
                           </ul>
                         </div>
                         <div class="col-sm-3">
                           <h2>Preservation</h2>
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://extension.usu.edu/foodpreservation/">Food Preservation</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/foodstorage/">Food Storage</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/canning/">Canning</a>
-                            </li>
+                            <li><a href="https://extension.usu.edu/foodpreservation/">Food Preservation</a></li>
+                            <li><a href="https://extension.usu.edu/foodstorage/">Food Storage</a></li>
+                            <li><a href="https://extension.usu.edu/canning/">Canning</a></li>
                           </ul>
                         </div>
                         <div class="col-sm-3">
                           <h2>Business</h2>
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://extension.usu.edu/foodbiz/">Food Biz</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/foodsafety/">Food Safety</a>
-                            </li>
+                            <li><a href="https://extension.usu.edu/foodbiz/">Food Biz</a></li>
+                            <li><a href="https://extension.usu.edu/foodsafety/">Food Safety</a></li>
                           </ul>
                         </div>
                       </div>
@@ -548,10 +480,8 @@
               </ul>
             </li>
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Family &amp; Relationships</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Family &amp; Relationships
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Family &amp; Relationships</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Family &amp; Relationships <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -561,67 +491,37 @@
                         <div class="col-sm-4">
                           <h1>Agriculture</h1>
                           <p>
-                            This is a paragraph that a writer will write later. It will make the menu look much more balanced and give it more valuable
-                            content for users. It will describe the various resources extension has to help people handle
-                            their agricultural resources effectively.
+                            This is a paragraph that a writer will write later. It will make the menu look much more balanced and give it more valuable content for users. It will describe the various resources extension has to help people handle their agricultural resources effectively.
                           </p>
                         </div>
                         <div class="col-sm-8">
                           <div class="col-sm-4">
                             <h2>Farming</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/productionhort/">Production Horticulture</a>
-                              </li>
-                              <li>
-                                <a href="https://diverseag.org/">Diversified Agriculture</a>
-                              </li>
-                              <li>
-                                <a href="https://agrability.usu.edu/">AgrAbility</a>
-                              </li>
-                              <li>
-                                <a href="https://smallfarms.usu.edu/">Small Farms</a>
-                              </li>
-                              <li>
-                                <a href="https://beekeeping.usu.edu/">Beekeeping</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/productionhort/">Production Horticulture</a></li>
+                              <li><a href="https://diverseag.org/">Diversified Agriculture</a></li>
+                              <li><a href="https://agrability.usu.edu/">AgrAbility</a></li>
+                              <li><a href="https://smallfarms.usu.edu/">Small Farms</a></li>
+                              <li><a href="https://beekeeping.usu.edu/">Beekeeping</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Animals</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/animalhealth/">Animal Health</a>
-                              </li>
-                              <li>
-                                <a href="https://poultry.usu.edu/">Poultry</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/equine/">Equine</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/behave/">BEHAVE Program</a>
-                              </li>
-                              <li>
-                                <a href="https://vetfeed.usu.edu/">FDA Vet Feed Directive</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/animalhealth/">Animal Health</a></li>
+                              <li><a href="https://poultry.usu.edu/">Poultry</a></li>
+                              <li><a href="https://extension.usu.edu/equine/">Equine</a></li>
+                              <li><a href="https://extension.usu.edu/behave/">BEHAVE Program</a></li>
+                              <li><a href="https://vetfeed.usu.edu/">FDA Vet Feed Directive</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Economics</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/agribusiness/">Agribusiness</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/agwastemanagement/">Ag Waste Management</a>
-                              </li>
-                              <li>
-                                <a href="https://ruraltax.org/">Rural Tax Education</a>
-                              </li>
-                              <li>
-                                <a href="https://apecextension.usu.edu/">Applied Economics Extension</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/agribusiness/">Agribusiness</a></li>
+                              <li><a href="https://extension.usu.edu/agwastemanagement/">Ag Waste Management</a></li>
+                              <li><a href="https://ruraltax.org/">Rural Tax Education</a></li>
+                              <li><a href="https://apecextension.usu.edu/">Applied Economics Extension</a></li>
                             </ul>
                           </div>
                         </div>
@@ -633,10 +533,8 @@
               </ul>
             </li>
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Agriculture</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Agriculture
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Agriculture</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Agriculture <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -646,67 +544,37 @@
                         <div class="col-sm-4">
                           <h1>Agriculture</h1>
                           <p>
-                            This is a paragraph that a writer will write later. It will make the menu look much more balanced and give it more valuable
-                            content for users. It will describe the various resources extension has to help people handle
-                            their agricultural resources effectively.
+                            This is a paragraph that a writer will write later. It will make the menu look much more balanced and give it more valuable content for users. It will describe the various resources extension has to help people handle their agricultural resources effectively.
                           </p>
                         </div>
                         <div class="col-sm-8">
                           <div class="col-sm-4">
                             <h2>Farming</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/productionhort/">Production Horticulture</a>
-                              </li>
-                              <li>
-                                <a href="https://diverseag.org/">Diversified Agriculture</a>
-                              </li>
-                              <li>
-                                <a href="https://agrability.usu.edu/">AgrAbility</a>
-                              </li>
-                              <li>
-                                <a href="https://smallfarms.usu.edu/">Small Farms</a>
-                              </li>
-                              <li>
-                                <a href="https://beekeeping.usu.edu/">Beekeeping</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/productionhort/">Production Horticulture</a></li>
+                              <li><a href="https://diverseag.org/">Diversified Agriculture</a></li>
+                              <li><a href="https://agrability.usu.edu/">AgrAbility</a></li>
+                              <li><a href="https://smallfarms.usu.edu/">Small Farms</a></li>
+                              <li><a href="https://beekeeping.usu.edu/">Beekeeping</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Animals</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/animalhealth/">Animal Health</a>
-                              </li>
-                              <li>
-                                <a href="https://poultry.usu.edu/">Poultry</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/equine/">Equine</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/behave/">BEHAVE Program</a>
-                              </li>
-                              <li>
-                                <a href="https://vetfeed.usu.edu/">FDA Vet Feed Directive</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/animalhealth/">Animal Health</a></li>
+                              <li><a href="https://poultry.usu.edu/">Poultry</a></li>
+                              <li><a href="https://extension.usu.edu/equine/">Equine</a></li>
+                              <li><a href="https://extension.usu.edu/behave/">BEHAVE Program</a></li>
+                              <li><a href="https://vetfeed.usu.edu/">FDA Vet Feed Directive</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Economics</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/agribusiness/">Agribusiness</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/agwastemanagement/">Ag Waste Management</a>
-                              </li>
-                              <li>
-                                <a href="https://ruraltax.org/">Rural Tax Education</a>
-                              </li>
-                              <li>
-                                <a href="https://apecextension.usu.edu/">Applied Economics Extension</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/agribusiness/">Agribusiness</a></li>
+                              <li><a href="https://extension.usu.edu/agwastemanagement/">Ag Waste Management</a></li>
+                              <li><a href="https://ruraltax.org/">Rural Tax Education</a></li>
+                              <li><a href="https://apecextension.usu.edu/">Applied Economics Extension</a></li>
                             </ul>
                           </div>
                         </div>
@@ -718,10 +586,8 @@
               </ul>
             </li>
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Natural Resources</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Natural Resources
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Natural Resources</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Natural Resources <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -731,103 +597,52 @@
                         <div class="col-sm-4">
                           <h1>Natural Resources</h1>
                           <p>
-                            This is another paragraph that a writer will write later. It's pretty similar to the one that's in the agriculture dropdown,
-                            but it is different. Why? Well, that's because they're about different things, silly. This one
-                            will describe the various resources extension has to help people handle natural resources responsibly.
+                            This is another paragraph that a writer will write later. It's pretty similar to the one that's in the agriculture dropdown, but it is different. Why? Well, that's because they're about different things, silly. This one will describe the various resources
+                            extension has to help people handle natural resources responsibly.
                           </p>
                         </div>
                         <div class="col-sm-8">
                           <div class="col-sm-4">
                             <h2>Natural Resources</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/iort/">Institute of Outdoor Recreation and Tourism</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/fieldguides/">Books and Field Guides</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/rangeplants/">Range Plants</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/rangelands/">Range Lands</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/wildlifeconflicts/">Wildlife Conflicts</a>
-                              </li>
-                              <li>
-                                <a href="https://utahbiomassresources.org/">Utah Biomass Resources</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/dirtdiggersdigest/">Dirt Diggers Digest</a>
-                              </li>
-                              <li>
-                                <a href="https://permaculture.ou-ext.usu.edu/">Permaculture</a>
-                              </li>
-                              <li>
-                                <a href="https://forestry.usu.edu/">Forestry</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/iort/">Institute of Outdoor Recreation and Tourism</a></li>
+                              <li><a href="https://extension.usu.edu/fieldguides/">Books and Field Guides</a></li>
+                              <li><a href="https://extension.usu.edu/rangeplants/">Range Plants</a></li>
+                              <li><a href="https://extension.usu.edu/rangelands/">Range Lands</a></li>
+                              <li><a href="https://extension.usu.edu/wildlifeconflicts/">Wildlife Conflicts</a></li>
+                              <li><a href="https://utahbiomassresources.org/">Utah Biomass Resources</a></li>
+                              <li><a href="https://extension.usu.edu/dirtdiggersdigest/">Dirt Diggers Digest</a></li>
+                              <li><a href="https://permaculture.ou-ext.usu.edu/">Permaculture</a></li>
+                              <li><a href="https://forestry.usu.edu/">Forestry</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Conservation</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/beetlekill/">Beetle Kill Pine</a>
-                              </li>
-                              <li>
-                                <a href="https://adoptasagegrouse.usu.edu/">Adopt-a-Sage-Grouse</a>
-                              </li>
-                              <li>
-                                <a href="https://utahcbcp.org/">Utah CBCP</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/beetlekill/">Beetle Kill Pine</a></li>
+                              <li><a href="https://adoptasagegrouse.usu.edu/">Adopt-a-Sage-Grouse</a></li>
+                              <li><a href="https://utahcbcp.org/">Utah CBCP</a></li>
                             </ul>
                             <h2>Pests</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://extension.usu.edu/pesticidecert/">Pesticide Certification</a>
-                              </li>
-                              <li>
-                                <a href="https://utahpests.usu.edu/">Utah Pests</a>
-                              </li>
-                              <li>
-                                <a href="https://utahpests.usu.edu/uppdl/">Plant Pest Diagnostic Lab</a>
-                              </li>
-                              <li>
-                                <a href="https://utahpests.usu.edu/ipm/">Integrated Pest Management</a>
-                              </li>
-                              <li>
-                                <a href="https://utahpests.usu.edu/schoolipm/">School IPM</a>
-                              </li>
-                              <li>
-                                <a href="https://utahpests.usu.edu/caps/">Cooperative Ag Pest Survey</a>
-                              </li>
+                              <li><a href="https://extension.usu.edu/pesticidecert/">Pesticide Certification</a></li>
+                              <li><a href="https://utahpests.usu.edu/">Utah Pests</a></li>
+                              <li><a href="https://utahpests.usu.edu/uppdl/">Plant Pest Diagnostic Lab</a></li>
+                              <li><a href="https://utahpests.usu.edu/ipm/">Integrated Pest Management</a></li>
+                              <li><a href="https://utahpests.usu.edu/schoolipm/">School IPM</a></li>
+                              <li><a href="https://utahpests.usu.edu/caps/">Cooperative Ag Pest Survey</a></li>
                             </ul>
                           </div>
                           <div class="col-sm-4">
                             <h2>Water</h2>
                             <ul class="list-unstyled">
-                              <li>
-                                <a href="https://cwel.usu.edu/">Center for Water Efficient Landscaping</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/irrigation/">Irrigation</a>
-                              </li>
-                              <li>
-                                <a href="https://watermaps.usu.edu/">Water Maps</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/water/">Water Impacts</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/waterquality/">Water Quality</a>
-                              </li>
-                              <li>
-                                <a href="https://extension.usu.edu/utahwaterwatch/">Water Watch</a>
-                              </li>
-                              <li>
-                                <a href="https://streamsidescience.usu.edu/">Stream Side Science</a>
-                              </li>
+                              <li><a href="https://cwel.usu.edu/">Center for Water Efficient Landscaping</a></li>
+                              <li><a href="https://extension.usu.edu/irrigation/">Irrigation</a></li>
+                              <li><a href="https://watermaps.usu.edu/">Water Maps</a></li>
+                              <li><a href="https://extension.usu.edu/water/">Water Impacts</a></li>
+                              <li><a href="https://extension.usu.edu/waterquality/">Water Quality</a></li>
+                              <li><a href="https://extension.usu.edu/utahwaterwatch/">Water Watch</a></li>
+                              <li><a href="https://streamsidescience.usu.edu/">Stream Side Science</a></li>
                             </ul>
                           </div>
                         </div>
@@ -838,10 +653,8 @@
               </ul>
             </li>
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Gardening</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Gardening
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Gardening</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Gardening <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -851,8 +664,7 @@
                         <div class="col-sm-4">
                           <h1>Gardening Info</h1>
                           <p>
-                            Have you ever wondered something about your garden? Well, we got allll kindsa stuff for you to read about! We can help you
-                            plant wuteeevaa you wanna do.
+                            Have you ever wondered something about your garden? Well, we got allll kindsa stuff for you to read about! We can help you plant wuteeevaa you wanna do.
                           </p>
                         </div>
                         <div class="col-sm-5">
@@ -860,44 +672,22 @@
                             <div class="col-sm-6">
                               <h2>Information</h2>
                               <ul class="list-unstyled">
-                                <li>
-                                  <a href="https://extension.usu.edu/yardandgarden/monthly-tips">Gardener's Almanac</a>
-                                </li>
-                                <li>
-                                  <a href="http://extension.usu.edu/yardandgarden/gardening-basics">Gardening Basics</a>
-                                </li>
-                                <li>
-                                  <a href="http://extension.usu.edu/yardandgarden/garden-care">Garden Care</a>
-                                </li>
-                                <li>
-                                  <a href="https://extension.usu.edu/yardandgarden/soils/">Soil Care</a>
-                                </li>
-                                <li>
-                                  <a href="https://extension.usu.edu/yardandgarden/lawns/">Yard Care</a>
-                                </li>
-                                <li>
-                                  <a href="https://www.youtube.com/playlist?list=PLCCD01947924D334B" target="_blank">Gardening Videos</a>
-                                </li>
+                                <li><a href="https://extension.usu.edu/yardandgarden/monthly-tips">Gardener's Almanac</a></li>
+                                <li><a href="http://extension.usu.edu/yardandgarden/gardening-basics">Gardening Basics</a></li>
+                                <li><a href="http://extension.usu.edu/yardandgarden/garden-care">Garden Care</a></li>
+                                <li><a href="https://extension.usu.edu/yardandgarden/soils/">Soil Care</a></li>
+                                <li><a href="https://extension.usu.edu/yardandgarden/lawns/">Yard Care</a></li>
+                                <li><a href="https://www.youtube.com/playlist?list=PLCCD01947924D334B" target="_blank">Gardening Videos</a></li>
                               </ul>
                             </div>
                             <div class="col-sm-6">
                               <h2>Resources</h2>
                               <ul class="list-unstyled">
-                                <li>
-                                  <a href="https://extension.usu.edu/mastergardener/index">Master Gardner</a>
-                                </li>
-                                <li>
-                                  <a href="https://extension.learn.usu.edu/browse/gardening">Online Gardening Courses</a>
-                                </li>
-                                <li>
-                                  <a href="https://utahpests.usu.edu/">Utah Pests</a>
-                                </li>
-                                <li>
-                                  <a href="https://extension.usu.edu/fieldguides/">Weed Guides</a>
-                                </li>
-                                <li>
-                                  <a href="https://cwel.usu.edu/">Water Efficient Landscaping</a>
-                                </li>
+                                <li><a href="https://extension.usu.edu/mastergardener/index">Master Gardner</a></li>
+                                <li><a href="https://extension.learn.usu.edu/browse/gardening">Online Gardening Courses</a></li>
+                                <li><a href="https://utahpests.usu.edu/">Utah Pests</a></li>
+                                <li><a href="https://extension.usu.edu/fieldguides/">Weed Guides</a></li>
+                                <li><a href="https://cwel.usu.edu/">Water Efficient Landscaping</a></li>
                               </ul>
                             </div>
                           </div>
@@ -905,15 +695,9 @@
                         <div class="col-sm-3">
                           <h2>USU Gardens and Centers</h2>
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="http://ogdenbotanicalgardens.org/">Ogden Botanical Gardens</a>
-                            </li>
-                            <li>
-                              <a href="http://usubotanicalcenter.org/">USU Botanical Gardens</a>
-                            </li>
-                            <li>
-                              <a href="http://www.swanerecocenter.org/">Swaner EcoCenter</a>
-                            </li>
+                            <li><a href="http://ogdenbotanicalgardens.org/">Ogden Botanical Gardens</a></li>
+                            <li><a href="http://usubotanicalcenter.org/">USU Botanical Gardens</a></li>
+                            <li><a href="http://www.swanerecocenter.org/">Swaner EcoCenter</a></li>
                           </ul>
                         </div>
                       </div>
@@ -925,10 +709,8 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown yamm-fw">
-              <a class="visible-xs" href="#">Locations</a>
-              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Locations
-                <i class="fa fa-chevron-down"></i>
-              </a>
+              <a class="visible-xs">Locations</a>
+              <a data-toggle="dropdown" class="dropdown-toggle hidden-xs" data-hover="dropdown" href="#">Locations <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-menu">
                 <li>
                   <div class="container">
@@ -942,98 +724,42 @@
                               <div class="row">
                                 <div class="col-sm-4">
                                   <ul class="list-unstyled">
-                                    <li>
-                                      <a href="https://extension.usu.edu/beaver">Beaver</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/boxelder">Boxelder</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/cache">Cache</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/carbon">Carbon</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/davis">Davis</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/duchesne">Duchesne</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/emery">Emery</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/garfield">Garfield</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/grand">Grand</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/iron">Iron</a>
-                                    </li>
+                                    <li><a href="https://extension.usu.edu/beaver">Beaver</a></li>
+                                    <li><a href="https://extension.usu.edu/boxelder">Boxelder</a></li>
+                                    <li><a href="https://extension.usu.edu/cache">Cache</a></li>
+                                    <li><a href="https://extension.usu.edu/carbon">Carbon</a></li>
+                                    <li><a href="https://extension.usu.edu/davis">Davis</a></li>
+                                    <li><a href="https://extension.usu.edu/duchesne">Duchesne</a></li>
+                                    <li><a href="https://extension.usu.edu/emery">Emery</a></li>
+                                    <li><a href="https://extension.usu.edu/garfield">Garfield</a></li>
+                                    <li><a href="https://extension.usu.edu/grand">Grand</a></li>
+                                    <li><a href="https://extension.usu.edu/iron">Iron</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-sm-4">
                                   <ul class="list-unstyled">
-                                    <li>
-                                      <a href="https://extension.usu.edu/juab">Juab</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/kane">Kane</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/millard">Millard</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/morgan">Morgan</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/piute">Piute</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/rich">Rich</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/saltlake">Salt Lake</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/sanjuan">San Juan</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/sanpete">Sanpete</a>
-                                    </li>
+                                    <li><a href="https://extension.usu.edu/juab">Juab</a></li>
+                                    <li><a href="https://extension.usu.edu/kane">Kane</a></li>
+                                    <li><a href="https://extension.usu.edu/millard">Millard</a></li>
+                                    <li><a href="https://extension.usu.edu/morgan">Morgan</a></li>
+                                    <li><a href="https://extension.usu.edu/piute">Piute</a></li>
+                                    <li><a href="https://extension.usu.edu/rich">Rich</a></li>
+                                    <li><a href="https://extension.usu.edu/saltlake">Salt Lake</a></li>
+                                    <li><a href="https://extension.usu.edu/sanjuan">San Juan</a></li>
+                                    <li><a href="https://extension.usu.edu/sanpete">Sanpete</a></li>
                                   </ul>
                                 </div>
                                 <div class="col-sm-4">
                                   <ul class="list-unstyled">
-                                    <li>
-                                      <a href="https://extension.usu.edu/sevier">Sevier</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/summit">Summit</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/tooele">Tooele</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/uintah">Uintah</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/utah">Utah</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/wasatch">Wasatch</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/washington">Washington</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/wayne">Wayne</a>
-                                    </li>
-                                    <li>
-                                      <a href="https://extension.usu.edu/weber">Weber</a>
-                                    </li>
+                                    <li><a href="https://extension.usu.edu/sevier">Sevier</a></li>
+                                    <li><a href="https://extension.usu.edu/summit">Summit</a></li>
+                                    <li><a href="https://extension.usu.edu/tooele">Tooele</a></li>
+                                    <li><a href="https://extension.usu.edu/uintah">Uintah</a></li>
+                                    <li><a href="https://extension.usu.edu/utah">Utah</a></li>
+                                    <li><a href="https://extension.usu.edu/wasatch">Wasatch</a></li>
+                                    <li><a href="https://extension.usu.edu/washington">Washington</a></li>
+                                    <li><a href="https://extension.usu.edu/wayne">Wayne</a></li>
+                                    <li><a href="https://extension.usu.edu/weber">Weber</a></li>
                                   </ul>
                                 </div>
                               </div>
@@ -1044,18 +770,10 @@
                           <!-- <div class="clearfix visible-sm-block"></div> -->
                           <h2>Centers</h2>
                           <ul class="list-unstyled">
-                            <li>
-                              <a href="https://swanerecocenter.org/">Swaner&nbsp;Ecocenter</a>
-                            </li>
-                            <li>
-                              <a href="https://ogdenbotanicalgardens.org/">Ogden&nbsp;Botanical&nbsp;Gardens</a>
-                            </li>
-                            <li>
-                              <a href="https://usubotanicalcenter.org/">USU&nbsp;Botanical&nbsp;Center</a>
-                            </li>
-                            <li>
-                              <a href="https://extension.usu.edu/wasatchfront">Wasatch&nbsp;Front</a>
-                            </li>
+                            <li><a href="https://swanerecocenter.org/">Swaner&nbsp;Ecocenter</a></li>
+                            <li><a href="https://ogdenbotanicalgardens.org/">Ogden&nbsp;Botanical&nbsp;Gardens</a></li>
+                            <li><a href="https://usubotanicalcenter.org/">USU&nbsp;Botanical&nbsp;Center</a></li>
+                            <li><a href="https://extension.usu.edu/wasatchfront">Wasatch&nbsp;Front</a></li>
                           </ul>
                         </div>
                         <!-- Yamm Content Container -->
@@ -1073,32 +791,26 @@
     </div>
     <!-- /Main Navigation Wrapper -->
   </div>
-  <div class="main-navigation gray-nav lower-nav">
+  <div class="main-navigation gray-nav">
     <!-- Main Navigation Wrapper -->
     <div class="main-navigation-wrapper">
       <!-- Navbar -->
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <a class="navbar-brand" href="/ext-dev/index-paired.html">Gardening</a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lower-navigation-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-navigation-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="lower-navigation-collapse">
+        <div class="collapse navbar-collapse" id="site-navigation-collapse">
           <ul class="nav navbar-nav">
-            <li>
-              <a href="#">Classes</a>
-            </li>
-            <li>
-              <a href="#">Tips</a>
-            </li>
-            <li>
-              <a href="#">Resources</a>
-            </li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Tips</a></li>
+            <li><a href="#">Resources</a></li>
           </ul>
         </div>
         <!-- /navbar-collapse -->
@@ -1115,18 +827,12 @@
           <div class="row">
             <div class="col-xs-6">
               <h3>Column 1/2</h3>
-              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget
-                nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus
-                quis ipsum convallis euismod. Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum.
-                Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
-              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget
-                nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus
-                quis ipsum convallis euismod. Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum.
-                Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
-              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget
-                nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus
-                quis ipsum convallis euismod. Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum.
-                Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
+              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus quis ipsum convallis euismod.
+                Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum. Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
+              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus quis ipsum convallis euismod.
+                Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum. Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
+              <p>Paragraph 1/2 column - Nulla facilisi. Vivamus sagittis lectus in justo congue blandit. Sed eget felis eget nulla consectetur congue. Maecenas metus. Fusce ac orci blandit purus facilisis hendrerit. Nullam ut metus quis ipsum convallis euismod.
+                Phasellus turpis purus, pharetra sit amet, dictum eget, ornare eget, ipsum. Morbi pulvinar quam vel sapien. Nulla vitae nisi vitae leo luctus.</p>
             </div>
             <div class="col-xs-6">
               <h3>Column 1/2</h3>
@@ -1142,52 +848,29 @@
       <div class="contentFooter">
         <!-- Footer Navigation -->
         <div class="footer-navigation">
-          <div class="col-location">
-            <a href="https://www.usu.edu/map/">
-              <img class="campus-map" style="padding: 10px 0 0 0;" src="/images/map.jpg" alt="Campus map" width="260" height="117"
-              />
-            </a>
-          </div>
+          <div class="col-location"><a href="https://www.usu.edu/map/"><img class="campus-map" style="padding: 10px 0 0 0;" src="/images/map.jpg" alt="Campus map" width="260" height="117" /></a></div>
           <div class="col-nav" style="position: static;">
             <h4>EDUCATION</h4>
             <ul>
-              <li>
-                <a href="//www.usu.edu/degrees/">Find a Degree</a>
-              </li>
-              <li>
-                <a href="//www.usu.edu/academics/colleges/">Colleges &amp; Schools</a>
-              </li>
-              <li>
-                <a href="//www.usu.edu/academics/departments/">Academic Departments</a>
-              </li>
+              <li><a href="//www.usu.edu/degrees/">Find a Degree</a></li>
+              <li><a href="//www.usu.edu/academics/colleges/">Colleges &amp; Schools</a></li>
+              <li><a href="//www.usu.edu/academics/departments/">Academic Departments</a></li>
             </ul>
           </div>
           <div class="col-nav" style="position: static;">
             <h4>QUICK LINKS</h4>
             <ul>
-              <li>
-                <a href="//www.usu.edu/azindex/">A-Z Index</a>
-              </li>
-              <li>
-                <a href="https://my.usu.edu/group/mycampus/home">MyUSU</a>
-              </li>
-              <li>
-                <a href="//directory.usu.edu/">Directory</a>
-              </li>
+              <li><a href="//www.usu.edu/azindex/">A-Z Index</a></li>
+              <li><a href="https://my.usu.edu/group/mycampus/home">MyUSU</a></li>
+              <li><a href="//directory.usu.edu/">Directory</a></li>
             </ul>
           </div>
           <div class="col-nav" style="position: static;">
             <h4>INFORMATION</h4>
             <ul>
-              <li>
-                <a href="//www.usu.edu/about/at-a-glance/">Quick Facts</a>
-              </li>
-              <li>
-                <a href="//www.usu.edu/about/history/">History &amp; Traditions</a>
-              </li>
-              <li>
-                <a href="//www.usu.edu/campus-life/recreation-wellness/">Recreation &amp; Wellness</a>
-              </li>
+              <li><a href="//www.usu.edu/about/at-a-glance/">Quick Facts</a></li>
+              <li><a href="//www.usu.edu/about/history/">History &amp; Traditions</a></li>
+              <li><a href="//www.usu.edu/campus-life/recreation-wellness/">Recreation &amp; Wellness</a></li>
             </ul>
           </div>
         </div>
@@ -1215,7 +898,7 @@
   <script src="https://ouresources.usu.edu/_resources/js/accordionSnippet.js"></script>
   <script src="https://ouresources.usu.edu/_resources/js/tabSnippet.js"></script>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       $('.selectpicker').selectpicker();
     });
   </script>
@@ -1244,7 +927,6 @@
     });
   </script>
   <!-- Google Analytics Script Goes Here -->
-  <a id="de" href="http://a.cms.omniupdate.com/10?skin=usu&amp;account=usu&amp;site=z_KirkSalisbury&amp;action=de&amp;path=/ext-dev/index-paired.html">©</a>
-</body>
+  <a id="de" href="http://a.cms.omniupdate.com/10?skin=usu&amp;account=usu&amp;site=z_KirkSalisbury&amp;action=de&amp;path=/ext-dev/index-paired.html">©</a></body>
 
 </html>
