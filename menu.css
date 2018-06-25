@@ -4,22 +4,11 @@
 
 .main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default{
   background: #3f5469;
-  /* background: #215db8; */
-  /* overflow-y: hidden; */
 }
 
 .main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default button.navbar-toggle{
   margin: 10px;
 }
-
-
-/* .main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default ul{
-  line-height: unset;
-}
-
-.main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default li{
-  line-height: unset;
-} */
 
 .main-navigation.gray-nav:nth-of-type(3) .main-navigation-wrapper nav.navbar.navbar-default a{
   font-size: 1.2em;
